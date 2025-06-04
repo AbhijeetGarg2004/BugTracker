@@ -1,0 +1,23 @@
+{
+    "name": "bugtrackr-backend",
+    "version": "1.0.0",
+    "description": "Backend for BugTrackr (Node, Express, MongoDB)",
+    "main": "app.js",
+    "scripts": {
+        "start": "node app.js",
+        "dev": "nodemon app.js"
+    },
+    "author": "Abhijeet",
+    "license": "MIT",
+    "dependencies": {
+        "bcryptjs": "^2.4.3",
+        "cors": "^2.8.5",
+        "dotenv": "^16.5.0",
+        "express": "^4.18.2",
+        "jsonwebtoken": "^9.0.0",
+        "mongoose": "^7.8.7"
+    },
+    "devDependencies": {
+        "nodemon": "^2.0.22"
+    }
+}

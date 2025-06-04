@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>BugTrackr | Report Bug</title>
+  <!-- Bootstrap 5 -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  />
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg">
+    <div class="container">
+      <a class="navbar-brand" href="dashboard.html">BugTrackr</a>
+      <div class="collapse navbar-collapse">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <button class="btn btn-outline-light" onclick="logoutUser()">
+              Logout
+            </button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Report Bug Form -->
+  <div class="container centered-container">
+    <div class="col-md-8 col-lg-6">
+      <div class="card p-4">
+        <h3 class="text-center mb-4">Report a New Bug</h3>
+        <form id="reportBugForm" onsubmit="reportBug(event)">
+          <div class="mb-3">
+            <label for="bugTitle" class="form-label">Bug Title</label>
+            <input
+              type="text"
+              class="form-control"
+              id="bugTitle"
+              placeholder="e.g. App crashes on login"
+              required
+            />
+          </div>
+          <div class="mb-3">
+            <label for="bugDescription" class="form-label">Description</label>
+            <textarea
+              class="form-control"
+              id="bugDescription"
+              rows="4"
+              placeholder="Describe the steps to reproduce…"
+              required
+            ></textarea>
+          </div>
+          <div class="mb-3">
+            <label for="bugPriority" class="form-label">Priority</label>
+            <select class="form-select" id="bugPriority" required>
+              <option value="Low">Low</option>
+              <option value="Medium" selected>Medium</option>
+              <option value="High">High</option>
+              <option value="Critical">Critical</option>
+            </select>
+          </div>
+          <div class="mb-3">
+            <label for="bugProject" class="form-label">Project</label>
+            <select class="form-select" id="bugProject" required>
+              <!-- Placeholder: JS should populate this with actual projects -->
+              <option value="">Select a project…</option>
+            </select>
+          </div>
+          <!-- Removed Assign To field -->
+
+          <button type="submit" class="btn btn-accent w-100">Submit Bug</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer mt-auto">
+    <p>© 2025 BugTrackr. All rights reserved.</p>
+  </footer>
+
+  <!-- Bootstrap JS Bundle -->
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+  ></script>
+  <!-- Custom JS -->
+  <script src="js/main.js"></script>
+</body>
+</html>

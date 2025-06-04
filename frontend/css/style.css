@@ -1,0 +1,130 @@
+/* Custom global styles */
+
+:root {
+    --primary-bg: #2a2d34;
+    --secondary-bg: #393e46;
+    --accent-color: #00adb5;
+    --light-text: #eeeeee;
+    --dark-text: #222831;
+  }
+  
+  body {
+    background-color: var(--primary-bg);
+    color: var(--light-text);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    min-height: 100vh;
+  }
+  
+  /* Navbar */
+  .navbar {
+    background-color: var(--secondary-bg);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
+  }
+  
+  .navbar-brand {
+    font-weight: 700;
+    color: var(--accent-color) !important;
+  }
+  
+  .nav-link {
+    color: var(--light-text) !important;
+    font-weight: 500;
+  }
+  
+  .nav-link:hover {
+    color: var(--accent-color) !important;
+  }
+  
+  /* Cards */
+  .card {
+    background-color: var(--secondary-bg);
+    border: none;
+    border-radius: 0.75rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+    color: var(--light-text);
+  }
+  
+  .card h5,
+  .card p {
+    color: var(--light-text);
+  }
+  
+  /* Buttons */
+  .btn-accent {
+    background-color: var(--accent-color);
+    color: var(--dark-text);
+    font-weight: 600;
+    transition: background-color 0.2s;
+  }
+  
+  .btn-accent:hover {
+    background-color: #019ca1 !important;
+    color: var(--light-text);
+  }
+  
+  /* Forms */
+  .form-control {
+    background-color: #eeeeee;
+    border: none;
+    border-radius: 0.5rem;
+    color: var(--dark-text);
+  }
+  
+  .form-control:focus {
+    background-color: #ffffff;
+    border: 2px solid var(--accent-color);
+    box-shadow: none;
+    color: var(--dark-text);
+  }
+  
+  .form-label {
+    font-weight: 600;
+    color: var(--light-text);
+  }
+  
+  /* Inputs inside cards */
+  .card .form-label,
+  .card .form-control {
+    color: var(--dark-text);
+    background-color: #ffffff;
+  }
+  
+  /* Centered container */
+  .centered-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 80vh;
+  }
+  
+  /* Footer */
+  .footer {
+    background-color: var(--secondary-bg);
+    padding: 1rem 0;
+    text-align: center;
+    color: var(--light-text);
+    font-size: 0.9rem;
+  }
+  
+  /* Bug card colors by priority */
+  .bug-priority-low {
+    border-left: 5px solid #4caf50; /* green */
+  }
+  
+  .bug-priority-medium {
+    border-left: 5px solid #ff9800; /* orange */
+  }
+  
+  .bug-priority-high {
+    border-left: 5px solid #f44336; /* red */
+  }
+  
+  .bug-priority-critical {
+    border-left: 5px solid #e91e63; /* pink */
+  }
+  
+  /* Small utility */
+  .mt-custom {
+    margin-top: 2rem;
+  }
+  
