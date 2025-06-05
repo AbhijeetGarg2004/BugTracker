@@ -78,11 +78,12 @@ exports.updateProject = async (req, res) => {
     project.description = description;
     project.members = validMemberIds;
 
-    const updatedProject = await project.save();
-    const populatedProject = await updatedProject
+    await project.save();
+
+    // Refetch the updated project with populated fields
+    const populatedProject = await Project.findById(project._id)
       .populate('createdBy', 'name email')
-      .populate('members', 'name email')
-      .execPopulate();
+      .populate('members', 'name email');
 
     res.json(populatedProject);
   } catch (error) {
@@ -90,6 +91,7 @@ exports.updateProject = async (req, res) => {
     res.status(500).json({ message: 'Server error while updating project' });
   }
 };
+
 
 // @desc    Delete a project (admin only)
 // @route   DELETE /api/projects/:id
