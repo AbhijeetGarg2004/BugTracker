@@ -128,3 +128,30 @@
     margin-top: 2rem;
   }
   
+  .btn-info {
+    background-color: #212529;
+    color: white;
+    border-color: #212529;
+  }
+
+  .btn-success {
+    background-color: #212529;
+    border-color: #212529;
+  }
+  
+  .btn-success:hover {
+    background-color: #31d2f2;
+    color: #212529;
+    border-color: #31d2f2;
+  }
+
+  .btn-primary {
+    background-color: #31d2f2;
+    color: black;
+    border-color: #212529;
+  }
+
+  .btn-primary:hover {
+    background-color: #00adb5;
+    color: white;
+  }
